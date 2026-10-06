@@ -1,0 +1,2 @@
+test_size,a,b,c,d,chi2,p_value,significant,rb_f1,gb_f1,gap
+250,237,3,10,0,2.7692,0.0923,False,90.57,97.03,6.46

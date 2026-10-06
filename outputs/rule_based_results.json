@@ -1,0 +1,14 @@
+{
+    "Model": "Rule-Based (V12)",
+    "Type": "Rule-Based",
+    "Accuracy": 98.56,
+    "Precision": 95.44,
+    "Recall": 97.67,
+    "F1-Score": 96.54,
+    "AUC": 0,
+    "TP": 251,
+    "FP": 12,
+    "TN": 981,
+    "FN": 6,
+    "generated_at": "2026-03-23T21:36:48.209059"
+}

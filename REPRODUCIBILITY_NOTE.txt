@@ -1,0 +1,31 @@
+REPRODUCIBILITY NOTE
+
+The dissertation results reported in this project (98.56% accuracy, 96.54% F1-score,
+1,250 audit entries) were produced by running the scripts in src/ with no fixed random
+seed. The simulation uses datetime.now() as a time anchor and random sampling without
+a seed, so each fresh run will generate slightly different events.
+
+The locked outputs are stored in outputs/ and reflect the final evaluation run. Those
+files should be used as the authoritative results for my dissertation.
+
+A supplementary reproducible_demo_copy/ folder is included for demonstration purposes.
+It contains an identical copy of all scripts except simulate_access_patterns.py, which
+has been modified with:
+
+  - random.seed(42) to fix the random number generator
+  - BASE_TIME = datetime(2026, 1, 1) to anchor timestamps to a fixed date
+
+Running the demo version will produce consistent output across machines and runs. The
+event counts and patterns will be similar to the dissertation run but not identical,
+because the seed was applied to a new simulation rather than replaying the original.
+
+To reproduce the demo:
+
+  cd reproducible_demo_copy
+  python3 src/simulate_access_patterns.py
+  python3 src/detection_engine_v12.py
+
+To view the locked dissertation results without re-running anything:
+
+  cat outputs/rule_based_results.json
+  cat outputs/ml_comparison_results_v4.csv

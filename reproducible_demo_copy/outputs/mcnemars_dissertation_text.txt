@@ -1,0 +1,1 @@
+chi2=3.2000, p=0.0625, b=0, c=5, significant=False
